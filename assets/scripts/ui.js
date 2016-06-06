@@ -16,13 +16,21 @@ const signInSuccess = (data) => {
   console.log(app);
 };
 
+const updateSuccess = function (){
+  console.log('update worked');
+};
+
+const signOutSuccess = () => {
+  app.user = null;
+  console.log(app);
+  console.log('sign out worked');
+};
 
 module.exports = {
   failure,
   success,
   signInSuccess,
-  //signOutSuccess,
-  //updateSuccess,
+  signOutSuccess,
+  updateSuccess,
   //indexSuccess,
-  //createSuccess,
 };

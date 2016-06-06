@@ -27,8 +27,6 @@ const addHandlers = () => {
     event.preventDefault();
     authApi.updatePassword(authUi.updateSuccess, authUi.failure, data);
   });
-  
-
 };
 
 

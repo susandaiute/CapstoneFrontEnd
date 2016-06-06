@@ -20,11 +20,41 @@ const signIn = (success, failure, data) => {
   .fail(failure);
 };
 
+const updatePassword = (updateSuccess, failure, data) => {
+console.log(app);
+let form = {
+  "passwords": {
+    "old": data.credentials.oldpassword,
+    "new": data.credentials.newpassword
+  }
+};
+$.ajax({
+  method : 'PATCH',
+  url: app.api + '/change-password/' + app.user.id,
+  data: form,
+  headers: {
+    Authorization: 'Token token=' + app.user.token,
+  },
+}).done(updateSuccess)
+.fail(failure);
+};
+
+const signOut = (success, failure) => {
+  $.ajax({
+    method: 'DELETE',
+    url: app.api + '/sign-out/' + app.user.id,
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+  }).done(success)
+  .fail(failure);
+};
+
 
 
 module.exports = {
   signUp,
   signIn,
-  //signOut,
-  //updatePassword,
+  signOut,
+  updatePassword,
 };
