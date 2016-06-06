@@ -11,10 +11,20 @@ const signUp = (success, failure, data) => {
   .fail(failure);
 };
 
+const signIn = (success, failure, data) => {
+  $.ajax({
+    method: 'POST',
+    url: app.api + '/sign-in',
+    data
+  }).done(success)
+  .fail(failure);
+};
+
+
 
 module.exports = {
   signUp,
-  //signIn,
+  signIn,
   //signOut,
   //updatePassword,
 };

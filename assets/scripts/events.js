@@ -10,11 +10,11 @@ const addHandlers = () => {
     event.preventDefault();
     let data = getFormFields(this);
     console.log(data);
-    console.log('sign up event hit');
     authApi.signUp(authUi.success, authUi.failure, data);
   });
   $('#signInForm').on('submit', function (event) {
     event.preventDefault();
+    console.log('sign in event hit');
     let data = getFormFields(this);
     authApi.signIn(authUi.signInSuccess, authUi.failure, data);
   });
@@ -27,10 +27,7 @@ const addHandlers = () => {
     event.preventDefault();
     authApi.updatePassword(authUi.updateSuccess, authUi.failure, data);
   });
-  $('.getGames').on('click', function (event) {
-    event.preventDefault();
-    authApi.index(authUi.indexSuccess, authUi.failure);
-  });
+  
 
 };
 
