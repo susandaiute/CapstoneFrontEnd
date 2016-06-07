@@ -1,0 +1,14 @@
+<div class="row bucket-row">
+  {{#each locations}}
+    <div class="col-md-3">
+      <div class="view view-first">
+        <div class="image-container"><img src={{this.url}}></div>
+        <div class="mask">
+        <div class="location-name">
+          <h2>{{this.name}}</h2>
+        </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

@@ -2,6 +2,8 @@
 
 const app = require('./app-data.js');
 const api = require('./api.js');
+const loadPets = require('./handlebars.js');
+
 
 const success = (data) => {
   console.log(data);
@@ -26,11 +28,17 @@ const signOutSuccess = () => {
   console.log('sign out worked');
 };
 
+const petSuccess = (data) => {
+  console.log(data);
+
+};
+
+
 module.exports = {
   failure,
   success,
   signInSuccess,
   signOutSuccess,
   updateSuccess,
-  //indexSuccess,
+  petSuccess,
 };

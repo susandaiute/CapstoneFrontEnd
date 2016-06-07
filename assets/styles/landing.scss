@@ -1,20 +1,15 @@
-header {
-    position: relative;
-    min-height: auto;
-    text-align: center;
-    color: #fff;
-    width: 100%;
-    background-color: #ae8e7e;
+.landing-page {
+  position: relative;
+  min-height: auto;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  background-color: #ae8e7e;
+  background-size: cover;
+
 }
 
-header .header-content {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    z-index: 2;
-}
-
-.signUpSection {
+.sign-up-section {
   display: flex;
   justify-content: flex-end;
 }
