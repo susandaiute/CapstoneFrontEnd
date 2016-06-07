@@ -4,6 +4,7 @@
 const getFormFields = require('../../lib/get-form-fields');
 const authApi = require('./api');
 const authUi = require('./ui');
+const petfinder = require('./petfinderApi');
 
 const addHandlers = () => {
   $('#signUpForm').on('submit', function (event) {
@@ -27,10 +28,11 @@ const addHandlers = () => {
     event.preventDefault();
     authApi.updatePassword(authUi.updateSuccess, authUi.failure, data);
   });
+  $('#getPetsButton').on('click', function (event) {
+    event.preventDefault();
+    petfinder.getPets(authUi.success, authUi.failure);
+  });
 };
-
-
-
 
 module.exports = {
   addHandlers,

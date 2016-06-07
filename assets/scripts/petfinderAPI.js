@@ -1,16 +1,17 @@
 'use strict';
 
-KEY=Rails.application.secrets.PETFINDER_KEY;
-SECRET=Rails.application.secrets.PETFINDER_SECRET;
+const app = require('./app-data');
 
-const getPhotos = (getPhotosSuccess, getPhotosFailure, searchTerm) => {
+const getPets = (success, failure, KEY) => {
   $.ajax({
     method: 'GET',
-    url:'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=479994a81bb05629ca3986e2eb43abe6&tags=landscape,' + searchTerm  + '&per_page=1&sort=interestingness-desc&format=json&nojsoncallback=1',
+    url: app.api + '/pets',
   }).done(success)
     .fail(failure);
 };
 
 
 
-module.exports = true;
+module.exports = {
+  getPets,
+};
