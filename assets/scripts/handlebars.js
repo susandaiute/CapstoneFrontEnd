@@ -2,14 +2,12 @@
 
 const app = require('./app-data.js');
 
-const loadPets = () => {
-  console.log("Loaded dat bucket");
-  let handlebarsTemplate = require('./petResults.handlebars');
-  let locations = app.user.locations;
-  console.log(locations);
-  $('#location-list').children().remove();
-  $('#location-list').append(handlebarsTemplate({
-    locations: locations
+const loadPets = (data) => {
+  console.log("Loaded pets handlebars");
+  let handlebarsTemplate = require('./petResults.hbs');
+  let pets = data.petfinder.pets.pet;
+  $('.petResultsTemplate').append(handlebarsTemplate({
+    pets: pets
   }));
 };
 

@@ -1,11 +1,12 @@
 <div class="row bucket-row">
-  {{#each locations}}
+  <h1>PETS</h1>
+  {{#each pets}}
     <div class="col-md-3">
       <div class="view view-first">
-        <div class="image-container"><img src={{this.url}}></div>
+        <div class="image-container"><img src="{{this.media}}"></div>
         <div class="mask">
-        <div class="location-name">
-          <h2>{{this.name}}</h2>
+        <div class="pet-name">
+          <h2>{{this.name.$t}}</h2>
         </div>
         </div>
       </div>

@@ -30,7 +30,7 @@ const signOutSuccess = () => {
 
 const petSuccess = (data) => {
   console.log(data);
-
+  loadPets.loadPets(data);
 };
 
 

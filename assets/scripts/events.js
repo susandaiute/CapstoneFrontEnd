@@ -30,7 +30,7 @@ const addHandlers = () => {
   });
   $('#getPetsButton').on('click', function (event) {
     event.preventDefault();
-    petfinder.getPets(authUi.success, authUi.failure);
+    petfinder.getPets(authUi.petSuccess, authUi.failure);
   });
 };
 
