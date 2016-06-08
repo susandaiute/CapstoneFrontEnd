@@ -1,0 +1,30 @@
+
+.view {
+  float: left;
+  height:300px;
+  width:100%;
+  overflow:auto;
+  border:2px solid red;
+  padding:2%;
+}
+
+.pets-header {
+  display: flex;
+  justify-content: center;
+}
+
+.pet-name {
+  text-align: center;
+}
+
+.view-first p {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.view-first:hover p {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.1s;
+}

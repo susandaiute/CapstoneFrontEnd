@@ -1,13 +1,16 @@
 <div class="row bucket-row">
-  <h1>PETS</h1>
+  <h1 class='pets-header'>PETS</h1>
   {{#each pets}}
-    <div class="col-md-3">
-      <div class="view view-first">
-        <div class="image-container"><img src="{{this.media}}"></div>
+    <div class="col-md-6">
+      <div class=" view view-first ">
+        <div class="image-container "><img src=" {{this.media}} "></div>
         <div class="mask">
-        <div class="pet-name">
-          <h2>{{this.name.$t}}</h2>
-        </div>
+          <div class="pet-name">
+            <h3>{{this.name.$t}}</h3>
+            <div class="pet-description">
+              <p>{{this.description.$t}}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
