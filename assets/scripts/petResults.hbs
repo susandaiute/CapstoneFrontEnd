@@ -7,6 +7,8 @@
         <div class="mask">
           <div class="pet-name">
             <h3>{{this.name.$t}}</h3>
+            <button type="button" id="addPetButton" data-name="{{this.name.$t}}" data-description="{{this.description.$t}}" class="pet-button"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
+            <span class="glyphicon glyphicon-remove" id="deletePetButton" data-id="{{id}}" aria-hidden="true"></span>
             <div class="pet-description">
               <p>{{this.description.$t}}</p>
             </div>

@@ -10,8 +10,35 @@ const getPets = (petSuccess, failure, KEY) => {
     .fail(failure);
 };
 
+const addFavorite = (success, failure, petName, petDescription, userID) => {
+  console.log('add favorite request queued');
+  $.ajax({
+  method: 'POST',
+  url: app.api + '/favorites',
+  data: {
+    favorite: {
+      name: petName,
+      description: petDescription,
+      user_id: userID,
+    }
+  },
+  headers: {
+  "Content-Type": "application/json",
+},
+  headers: {
+  Authorization: 'Token token=' + app.user.token,
+},
+}).done(success)
+  .fail(failure);
+};
+
+const addPet = () => {
+  console.log('add pet ran');
+}
+
 
 
 module.exports = {
   getPets,
+  addFavorite,
 };

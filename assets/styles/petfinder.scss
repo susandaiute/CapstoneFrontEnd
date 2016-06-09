@@ -1,11 +1,18 @@
 
 .view {
+  border: 2px solid #7c7d75;
   float: left;
-  height:300px;
-  width:100%;
-  overflow:auto;
-  border:2px solid red;
-  padding:2%;
+  height: 400px;
+  padding: 2%;
+  width: 100%;
+}
+
+.pet-description {
+//  border: 1px solid #7c7d75;
+  height: 250px;
+  overflow: auto;
+  padding: 2%;
+  width: 100%;
 }
 
 .pets-header {
@@ -17,14 +24,12 @@
   text-align: center;
 }
 
-.view-first p {
-  transform: translateY(100px);
-  opacity: 0;
-  transition: all 0.2s linear;
+.glyphicon {
+  font-size: 30px;
 }
 
-.view-first:hover p {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.1s;
-}
+// .pet-button {
+//   background: transparent;
+//   border: 0;
+//   outline: none;
+// }

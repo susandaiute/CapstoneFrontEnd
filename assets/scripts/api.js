@@ -50,8 +50,6 @@ const signOut = (success, failure) => {
   .fail(failure);
 };
 
-
-
 module.exports = {
   signUp,
   signIn,
