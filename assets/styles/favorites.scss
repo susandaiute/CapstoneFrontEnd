@@ -1,0 +1,17 @@
+
+.favorite-button .pet-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.favorite-info .favorite-description {
+  height: 200px;
+  overflow: auto;
+  padding: 2%;
+  width: 100%;
+}
+
+.favorite-info .row {
+  border: 2px solid yellow;
+  height: 275px;
+}

@@ -3,7 +3,8 @@
 const app = require('./app-data.js');
 const api = require('./api.js');
 const loadPets = require('./handlebars.js');
-
+const petfinder = require('./petfinderApi');
+const authUi = require('./ui');
 
 const success = (data) => {
   console.log(data);
@@ -15,7 +16,7 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   app.user = data.user;
-  console.log(app);
+  console.log('sign in success');
 };
 
 const updateSuccess = function (){

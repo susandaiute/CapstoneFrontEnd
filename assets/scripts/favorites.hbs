@@ -1,12 +1,20 @@
 <div class="favHBS">
   <h1 class='favorites-header'>Favorites</h1>
-  {{#each favorites}}
-    <div class="pet-name">
-      <h3>{{this.name}}</h3>
-      <button type="button" id="deletePetButton" data-id="{{this.id}}" class="pet-button"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-      <div class="pet-description">
-        <p>{{this.description}}</p>
+
+  <div class="favorite-info container-fluid">
+    {{#each favorites}}
+      <div class="row">
+        <div class="col-md-8">
+          <h3>{{this.name}}</h3>
+          <div class="favorite-description">
+            <p>{{this.description}}</p>
+          </div>
+        </div>
+        <div class="col-md-4 favorite-button">
+          <button type="button" id="deletePetButton" data-id="{{this.id}}" class="pet-button"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+          <button type="button" id="applyPetButton" data-id="{{this.id}}" class="pet-button"> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+        </div>
       </div>
-    </div>
-  {{/each}}
+    {{/each}}
+  </div>
 </div>
