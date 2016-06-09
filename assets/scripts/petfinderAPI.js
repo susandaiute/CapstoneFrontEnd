@@ -20,6 +20,7 @@ const addFavorite = (petName, userID, petDescription, success, failure) => {
       name: petName,
       description: petDescription,
       user_id: userID,
+      application: false,
     }
   },
   headers: {
@@ -54,10 +55,30 @@ const getFavorites = (favoritesSuccess, failure) => {
     .fail(failure);
 };
 
+const applyFavorite = (petID, updateFavoriteSuccess, failure) => {
+  $.ajax({
+    method: 'PATCH',
+    url: app.api + '/favorites/' + petID,
+    data: {
+      favorite: {
+        application: true,
+      }
+    },
+    headers: {
+    "Content-Type": "application/json",
+  },
+    headers: {
+    Authorization: 'Token token=' + app.user.token,
+  },
+}).done(updateFavoriteSuccess)
+    .fail(failure);
+  };
+
 
 module.exports = {
   getPets,
   addFavorite,
   deleteFavorite,
   getFavorites,
+  applyFavorite,
 };

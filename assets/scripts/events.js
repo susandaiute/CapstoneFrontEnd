@@ -48,6 +48,11 @@ const addHandlers = () => {
     let petID = $(this).data('id');
     petfinder.deleteFavorite(petID, authUi.deleteSuccess, authUi.failure);
   });
+  $('.compiledFavorites').on('click', '#applyPetButton', function() {
+    console.log('apply pet button clicked');
+    let petID = $(this).data('id');
+    petfinder.applyFavorite(petID, authUi.favoriteUpdateSuccess, authUi.failure);
+  });
 
 
 };

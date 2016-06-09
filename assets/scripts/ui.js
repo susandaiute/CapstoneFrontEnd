@@ -45,6 +45,10 @@ const deleteSuccess = () => {
   console.log('delete worked');
 };
 
+const favoriteUpdateSuccess = () => {
+  console.log('fav update worked');
+}
+
 
 module.exports = {
   failure,
@@ -55,4 +59,5 @@ module.exports = {
   petSuccess,
   deleteSuccess,
   favoritesSuccess,
+  favoriteUpdateSuccess,
 };
