@@ -10,8 +10,11 @@ const getPets = (petSuccess, failure, KEY) => {
     .fail(failure);
 };
 
-const addFavorite = (success, failure, petName, petDescription, userID) => {
+const addFavorite = (petName, userID, petDescription, success, failure) => {
   console.log('add favorite request queued');
+  console.log(petName);
+  console.log(userID);
+  console.log(petDescription);
   $.ajax({
   method: 'POST',
   url: app.api + '/favorites',
@@ -31,11 +34,6 @@ const addFavorite = (success, failure, petName, petDescription, userID) => {
 }).done(success)
   .fail(failure);
 };
-
-const addPet = () => {
-  console.log('add pet ran');
-}
-
 
 
 module.exports = {

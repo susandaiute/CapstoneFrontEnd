@@ -19,7 +19,7 @@ const addHandlers = () => {
     console.log('sign in event hit');
     let data = getFormFields(this);
     authApi.signIn(authUi.signInSuccess, authUi.failure, data);
-    $('.modal.in').modal('hide') 
+    $('.modal.in').modal('hide');
   });
   $('#sign-out').on('click', function(event) {
     event.preventDefault();
@@ -29,6 +29,7 @@ const addHandlers = () => {
     let data = getFormFields(this);
     event.preventDefault();
     authApi.updatePassword(authUi.updateSuccess, authUi.failure, data);
+    $('.modal.in').modal('hide');
   });
   $('#getPetsButton').on('click', function(event) {
     event.preventDefault();
@@ -40,7 +41,7 @@ const addHandlers = () => {
     let petName = $(this).data("name");
     let petDescription = $(this).data("description");
     let userID = app.user.id;
-    petfinder.addFavorite(authUi.success, authUi.failure, userID, petName, petDescription);
+    petfinder.addFavorite(petName, userID, petDescription, authUi.success, authUi.failure);
   });
 
 };
