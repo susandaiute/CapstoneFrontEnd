@@ -5,9 +5,7 @@ const getFormFields = require('../../lib/get-form-fields');
 const authApi = require('./api');
 const authUi = require('./ui');
 const petfinder = require('./petfinderApi');
-const app = require('./app-data.js');
-//const petData = require('./petResults.hbs');
-
+const app = require('./app-data');
 
 const addHandlers = () => {
   $('#signUpForm').on('submit', function(event) {
@@ -21,6 +19,7 @@ const addHandlers = () => {
     console.log('sign in event hit');
     let data = getFormFields(this);
     authApi.signIn(authUi.signInSuccess, authUi.failure, data);
+    $('.modal.in').modal('hide') 
   });
   $('#sign-out').on('click', function(event) {
     event.preventDefault();
@@ -38,14 +37,10 @@ const addHandlers = () => {
 
   $('.petResultsTemplate').on('click', '#addPetButton', function() {
     console.log('add pet button clicked');
-    console.log($(this).data("name"));
-    console.log($(this).data("description"));
-    //console.log(data);
-    // let petData = data.petfinder.pets.pet;
-    // let petName = petData.name;
-    // let petDescription = petData.description;
-    // let userID = app.user.id;
-    // petfinder.addFavorite(authUi.success, authUi.failure, userID, petName, petDescription, data);
+    let petName = $(this).data("name");
+    let petDescription = $(this).data("description");
+    let userID = app.user.id;
+    petfinder.addFavorite(authUi.success, authUi.failure, userID, petName, petDescription);
   });
 
 };
