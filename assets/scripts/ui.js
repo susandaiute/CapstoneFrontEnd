@@ -33,6 +33,17 @@ const petSuccess = (data) => {
   loadPets.loadPets(data);
 };
 
+const favoritesSuccess =(data) => {
+  console.log('favorites success');
+  console.log(data);
+  loadPets.loadFavorites(data);
+};
+
+const deleteSuccess = () => {
+  console.log(app);
+  console.log('delete worked');
+};
+
 
 module.exports = {
   failure,
@@ -41,4 +52,6 @@ module.exports = {
   signOutSuccess,
   updateSuccess,
   petSuccess,
+  deleteSuccess,
+  favoritesSuccess,
 };

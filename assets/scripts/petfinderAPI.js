@@ -12,9 +12,6 @@ const getPets = (petSuccess, failure, KEY) => {
 
 const addFavorite = (petName, userID, petDescription, success, failure) => {
   console.log('add favorite request queued');
-  console.log(petName);
-  console.log(userID);
-  console.log(petDescription);
   $.ajax({
   method: 'POST',
   url: app.api + '/favorites',
@@ -35,8 +32,32 @@ const addFavorite = (petName, userID, petDescription, success, failure) => {
   .fail(failure);
 };
 
+const deleteFavorite = (petID, deleteSuccess, failure) => {
+  $.ajax({
+    method: 'DELETE',
+    url: app.api + '/favorites/' + petID,
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+  }).done(deleteSuccess)
+  .fail(failure);
+};
+
+const getFavorites = (favoritesSuccess, failure) => {
+  $.ajax({
+      method: 'GET',
+      url: app.api + '/favorites',
+      headers: {
+        Authorization: 'Token token=' + app.user.token,
+      },
+    }).done(favoritesSuccess)
+    .fail(failure);
+};
+
 
 module.exports = {
   getPets,
   addFavorite,
+  deleteFavorite,
+  getFavorites,
 };

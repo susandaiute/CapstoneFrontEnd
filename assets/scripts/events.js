@@ -34,8 +34,8 @@ const addHandlers = () => {
   $('#getPetsButton').on('click', function(event) {
     event.preventDefault();
     petfinder.getPets(authUi.petSuccess, authUi.failure);
+    petfinder.getFavorites(authUi.favoritesSuccess, authUi.failure);
   });
-
   $('.petResultsTemplate').on('click', '#addPetButton', function() {
     console.log('add pet button clicked');
     let petName = $(this).data("name");
@@ -43,6 +43,12 @@ const addHandlers = () => {
     let userID = app.user.id;
     petfinder.addFavorite(petName, userID, petDescription, authUi.success, authUi.failure);
   });
+  $('.compiledFavorites').on('click', '#deletePetButton', function() {
+    console.log('delete pet button clicked');
+    let petID = $(this).data('id');
+    petfinder.deleteFavorite(petID, authUi.deleteSuccess, authUi.failure);
+  });
+
 
 };
 
