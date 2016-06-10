@@ -1,18 +1,40 @@
 .landing-page {
-  position: relative;
-  min-height: auto;
-  //height: 100vh;
-  text-align: center;
-  color: #fff;
-  width: 100%;
   background-color: #ae8e7e;
+  background-image: url('http://i.imgur.com/hk4XG5J.jpg');
   background-size: cover;
+  color: #fff;
+  height: 100vh;
+  min-height: auto;
+  text-align: center;
+  width: 100%;
+}
 
+h1 {
+  font-size: 75px;
+  text-align: center;
 }
 
 .sign-up-section {
+  align-items: center;
   display: flex;
+  font-size: 17px;
   justify-content: flex-end;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-right: 22px;
+  margin-top: 70px;
+  position: relative;
+}
+
+.sign-up-form {
+  display: block;
+  position: relative;
+  width: 300px;
+}
+
+.navbar {
+  background-color: black;
+  border: black;
+}
+
+.navbar-header {
+  color: white;
 }
