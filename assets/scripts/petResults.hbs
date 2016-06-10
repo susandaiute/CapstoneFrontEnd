@@ -3,7 +3,7 @@
   {{#each pets}}
     <div class="col-md-6">
       <div class=" view view-first ">
-        <div class="image-container "><img src=" {{this.media}} "></div>
+        <div class="image-container "><img src=" {{this.media.photos.photo.0.$t}} "></div>
         <div class="mask">
           <div class="pet-name">
             <h3>{{this.name.$t}}</h3>
