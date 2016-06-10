@@ -17,8 +17,6 @@ const failure = (error) => {
 const signInSuccess = (data) => {
   app.user = data.user;
   console.log('sign in success');
-  petfinder.getPets(authUi.petSuccess, authUi.failure);
-  petfinder.getFavorites(authUi.favoritesSuccess, authUi.failure);
 };
 
 const updateSuccess = function (){
@@ -49,7 +47,7 @@ const deleteSuccess = () => {
 
 const favoriteUpdateSuccess = () => {
   console.log('fav update worked');
-}
+};
 
 
 module.exports = {

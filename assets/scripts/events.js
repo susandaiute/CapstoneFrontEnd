@@ -31,10 +31,11 @@ const addHandlers = () => {
     authApi.updatePassword(authUi.updateSuccess, authUi.failure, data);
     $('.modal.in').modal('hide');
   });
-  // $('#getPetsButton').on('click', function(event) {
-  //   event.preventDefault();
-  //
-  // });
+  $('#getPetsButton').on('click', function(event) {
+    event.preventDefault();
+    petfinder.getPets(authUi.petSuccess, authUi.failure);
+    petfinder.getFavorites(authUi.favoritesSuccess, authUi.failure);
+  });
   $('.petResultsTemplate').on('click', '#addPetButton', function() {
     console.log('add pet button clicked');
     let petName = $(this).data("name");
