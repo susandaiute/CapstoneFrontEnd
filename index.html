@@ -15,27 +15,7 @@
     <div class="header-content">
       <h1>South Shore Labrador Rescue</h1>
     </div>
-    <div class="sign-up-section">
-      <div class="inner">
-        <!-- Sign Up Form --------------------------------->
-        <form name="signUpForm" id="signUpForm" class="sign-up-form">
-          <div class="form-group">
-            <label for="exampleInputEmailsignup">Email address</label>
-            <input type="email" name="credentials[email]" value="JohnDoe@gmail.com" class="form-control grabthis" id="signUpEmail" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPasswordSignUp">Password</label>
-            <input type="password" name="credentials[password]" value="password" class="form-control" id="SignUpPassword" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPasswordSignUp">Confirm Password</label>
-            <input type="password" name="credentials[password_confirmation]" value="password" class="form-control" id="SignUpPasswordConfirm" placeholder="Password">
-          </div>
-          <button id="signUpButton" type="submit" class="btn btn-default">Sign Up</button>
-        </form>
-        <!--End Sign Up Form-->
-      </div>
-    </div>
+    <button id="getPetsButton" class="get-button">Find Local Labs</button>
   </div>
 
   <!--- Navbar ------------------------------->
@@ -53,7 +33,7 @@
               Sign In</button>
           </li>
           <li>
-            <button type="button" class="btn btn-md" data-toggle="modal" data-target="#update">
+            <button type="button" class="btn btn-md" id="update" data-toggle="modal" data-target="#update">
               Update Password</button>
           </li>
           <li>
@@ -87,6 +67,38 @@
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </form>
         </div>
+        <div class="form-group">
+          <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-up-modal" class="register" id="register-opp">Need to register?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal signUp -->
+  <div class="modal fade sign up" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+        </div>
+        <div class="modal-body">
+          <form name="signUpForm" id="signUpForm" class="sign-up-form">
+            <div class="form-group">
+              <label for="exampleInputEmailsignup">Email address</label>
+              <input type="email" name="credentials[email]" value="JohnDoe@gmail.com" class="form-control grabthis" id="signUpEmail" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPasswordSignUp">Password</label>
+              <input type="password" name="credentials[password]" value="password" class="form-control" id="SignUpPassword" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPasswordSignUp">Confirm Password</label>
+              <input type="password" name="credentials[password_confirmation]" value="password" class="form-control" id="SignUpPasswordConfirm" placeholder="Password">
+            </div>
+            <button id="signUpButton" type="submit" class="btn btn-default">Sign Up</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -117,13 +129,16 @@
     </div>
   </div>
 
-  <!--- API Results ------------------------------------->
-  <button id="getPetsButton">Find Local Labs</button>
-  <div class="petResultsTemplate">
-  </div>
+  <div class="body-indent">
 
-  <!--- Favorites --------------------------------------->
-  <div class="compiledFavorites">
+    <!--- API Results ------------------------------------->
+    <div class="petResultsTemplate">
+    </div>
+
+    <!--- Favorites --------------------------------------->
+    <div class="compiledFavorites">
+    </div>
+
   </div>
 
 

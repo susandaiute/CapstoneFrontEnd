@@ -1,28 +1,25 @@
 
 .view {
-  //border: 2px solid #7c7d75;
+  color: black;
   float: left;
-  height: 400px;
+  height: 460px;
+  margin-bottom: 60px;
+  overflow: hidden;
   padding: 2%;
   width: 100%;
-  background-color: #eae0d0;
 }
 
 .pet-description {
-//  border: 1px solid #7c7d75;
+  display: block;
   height: 250px;
-  overflow: auto;
-  padding: 2%;
+  overflow: scroll;
+  padding: 10% 3%;
   width: 100%;
 }
 
 .pets-header {
   display: flex;
   justify-content: center;
-}
-
-.pet-name {
-  text-align: center;
 }
 
 .glyphicon {
@@ -32,5 +29,25 @@
 .pet-button {
   background: transparent;
   border: 0;
+  display: inline;
   outline: none;
+}
+
+.pet-button:hover {
+  color: red;
+}
+
+.pet-image {
+  border: 3px solid black;
+  display: inline;
+  height: 75%;
+  width: auto;
+}
+
+.compiledFavorites {
+  color: black;
+}
+
+#applyPetButton:hover {
+  color: green;
 }

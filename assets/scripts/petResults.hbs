@@ -1,9 +1,9 @@
 <div class="row bucket-row">
-  <h1 class='pets-header'>PETS</h1>
+  <h2 class="pets-header">Available Dogs</h2>
   {{#each pets}}
     <div class="col-md-6">
-      <div class=" view view-first ">
-        <div class="image-container "><img src=" {{this.media.photos.photo.0.$t}} "></div>
+      <div class=" view view-first">
+        <div class="image-container"><img src=" {{this.media.photos.photo.0.$t}} " class="pet-image"></div>
         <div class="mask">
           <div class="pet-name">
             <h3>{{this.name.$t}}</h3>

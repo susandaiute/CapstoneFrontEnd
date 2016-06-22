@@ -8,4 +8,6 @@ const authEvents = require('./events.js');
 
 $(document).ready(function() {
   authEvents.addHandlers();
+  $('#sign-out').hide();
+  $('#update').hide();
 });

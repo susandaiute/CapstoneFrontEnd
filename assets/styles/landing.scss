@@ -1,3 +1,11 @@
+.modal-content {
+    color: #000;
+}
+
+.register {
+  margin-left: 18px;
+}
+
 .landing-page {
   background-color: #ae8e7e;
   background-size: cover;
@@ -13,18 +21,17 @@ h1 {
   text-align: center;
 }
 
-.sign-up-section {
-  align-items: center;
-  display: flex;
-  font-size: 17px;
-  justify-content: flex-end;
-  margin-right: 22px;
-  margin-top: 70px;
+.get-button {
+  background: transparent;
+  border: 0;
   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+  font-size: 40px;
+  margin-top: 200px;
 }
 
-.sign-up-form {
-  display: block;
-  position: relative;
-  width: 275px;
+.get-button:hover {
+  text-decoration: underline;
 }

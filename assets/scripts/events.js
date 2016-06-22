@@ -35,6 +35,7 @@ const addHandlers = () => {
     event.preventDefault();
     petfinder.getPets(authUi.petSuccess, authUi.failure);
     petfinder.getFavorites(authUi.favoritesSuccess, authUi.failure);
+    $('#addPetButton').hide();
   });
   $('.petResultsTemplate').on('click', '#addPetButton', function() {
     console.log('add pet button clicked');

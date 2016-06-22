@@ -16,6 +16,8 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   app.user = data.user;
+  $('#sign-out').show();
+  $('#update').show();
   console.log('sign in success');
 };
 
